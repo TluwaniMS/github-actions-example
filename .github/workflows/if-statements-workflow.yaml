@@ -1,0 +1,5 @@
+name: If Statements Workflow Example
+on:
+  push:
+    paths:
+      - "if-statement-trigger/*"

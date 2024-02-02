@@ -1,0 +1,5 @@
+name: Node Scripts Actions Workflow Example
+on:
+  push:
+    paths:
+      - "node-scripts-trigger/*"

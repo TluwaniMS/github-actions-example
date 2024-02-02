@@ -1,0 +1,5 @@
+name: Env Variable Workflow Example
+on:
+  push:
+    paths:
+      - "env-variable-trigger"
