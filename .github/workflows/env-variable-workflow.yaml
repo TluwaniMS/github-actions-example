@@ -2,4 +2,39 @@ name: Env Variable Workflow Example
 on:
   push:
     paths:
-      - "env-variable-trigger"
+      - 'env-variable-trigger'
+
+env:
+  DAY_OF_WEEK: Monday
+
+jobs:
+  install-node-packages-and-update-the-global-env-variable-and-generate-a-random-message:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '14' # Adjust to the desired Node.js version
+
+      - name: Install dependencies
+        run: npm install
+        working-directory: ./env-variable-trigger
+
+      - name: Update the DAY_OF_WEEK to Tuesday
+        run: |
+          export DAY_OF_WEEK=Tuesday
+
+      - name: Generate a message for Tuesday.
+        run: node script.js
+        working-directory: ./env-variable-trigger
+
+      - name: Update the DAY_OF_WEEK to Wednesday.
+        run: |
+          export DAY_OF_WEEK=Wednesday
+
+      - name: Generate a message for Wednesday.
+        run: node script.js
+        working-directory: ./env-variable-trigger
