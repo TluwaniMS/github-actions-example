@@ -11,7 +11,7 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: '18'
-      - run: cd /node-scripts-trigger
+      - run: cd ./node-scripts-trigger
       - run: ls
       - run: npm install
       - run: node script.js
