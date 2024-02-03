@@ -1,4 +1,5 @@
 name: Env Variable Workflow Example
+
 on:
   push:
     paths:
@@ -23,18 +24,17 @@ jobs:
         run: npm install
         working-directory: ./env-variable-trigger
 
-      - name: Update the DAY_OF_WEEK to Tuesday
-        run: |
-          export DAY_OF_WEEK=Tuesday
+      - name: Update the DAY_OF_WEEK to Tuesday and set globally
+        run: echo "DAY_OF_WEEK=Tuesday" >> $GITHUB_ENV
 
       - name: Generate a message for Tuesday.
         run: node script.js
         working-directory: ./env-variable-trigger
 
-      - name: Update the DAY_OF_WEEK to Wednesday.
-        run: |
-          export DAY_OF_WEEK=Wednesday
+      - name: Update the DAY_OF_WEEK to Wednesday and set globally
+        run: echo "DAY_OF_WEEK=Wednesday" >> $GITHUB_ENV
 
       - name: Generate a message for Wednesday.
         run: node script.js
         working-directory: ./env-variable-trigger
+
