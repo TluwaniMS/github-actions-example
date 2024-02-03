@@ -1,18 +1,27 @@
 name: Node Scripts Actions Workflow Example
+
 on:
   push:
     paths:
       - "node-scripts-trigger/*"
+
 jobs:
   install-node-packages-and-run-the-random-generator:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v3
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
         with:
-          node-version: '18'
-      - run: cd ./node-scripts-trigger
-      - run: ls
-      - run: npm install
-      - run: node script.js
+          node-version: '14'  # Adjust to the desired Node.js version
+
+      - name: Install dependencies
+        run: npm install
+        working-directory: ./node-scripts-trigger
+
+      - name: Run script
+        run: node script.js
+        working-directory: ./node-scripts-trigger
 
