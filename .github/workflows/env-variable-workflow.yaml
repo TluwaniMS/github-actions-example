@@ -2,7 +2,7 @@ name: Env Variable Workflow Example
 on:
   push:
     paths:
-      - 'env-variable-trigger'
+      - 'env-variable-trigger/*'
 
 env:
   DAY_OF_WEEK: Monday
