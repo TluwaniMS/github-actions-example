@@ -11,6 +11,5 @@ jobs:
       QUALIFIES: true
     steps:
       - name: Greet the guest.
-        run: |
-          echo "Greetings $NAME, and welcome to GitHub Actions workflow info emitter."
+        run: echo "Greetings $NAME, and welcome to GitHub Actions workflow info emitter."
 
