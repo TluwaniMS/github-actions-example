@@ -12,4 +12,4 @@ jobs:
     steps:
       - name: Greet the guest.
         run: |
-          echo "Greetings $Name, and welcome to github actions work flow info emmiter."
+          echo "Greetings '$Name', and welcome to github actions work flow info emmiter."
