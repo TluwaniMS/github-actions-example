@@ -1,5 +1,15 @@
 name: If Statements Workflow Example
-on:
-  push:
-    paths:
-      - "if-statement-trigger/*"
+on: push
+
+jobs:
+  user-information-communicator:
+    runs-on: ubuntu-latest
+    env:
+      Name: Rofhiwa
+      Age: 28
+      Gender: Male
+      Qualifies: true
+    steps:
+      - name: Greet the guest.
+        run: |
+          echo "Greetings $Name, and welcome to github actions work flow info emmiter."
