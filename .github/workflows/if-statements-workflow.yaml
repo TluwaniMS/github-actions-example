@@ -25,6 +25,6 @@ jobs:
           echo "Hello $NAME ! 🌸 Sending you warm and graceful vibes on this beautiful day. Wishing you joy, laughter, and all the wonderful moments that make you shine. You're truly special, and your presence brightens the world. Embrace the beauty of today! 💖✨"
 
       - name: Welcome Qualifying Members to the Army
-        if: ${{ env.QUALIFIES == true }}
+        if: ${{ env.QUALIFIES == 'true' }}
         run: |
           echo "Welcome to the esteemed army of knowledge seekers, $NAME ! 🚀 Your journey into the vast realm of information begins here. Brace yourself for a thrilling adventure of discovery, learning, and growth. Together, we march forward in pursuit of wisdom and understanding. Let the quest for knowledge empower and inspire you on this incredible expedition!"
