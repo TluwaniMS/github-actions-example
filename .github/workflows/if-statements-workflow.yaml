@@ -15,11 +15,11 @@ jobs:
           echo "Greetings $NAME, and welcome to GitHub Actions workflow info emitter."
 
       - name: The Gentlemans Greeting
-        if: ${{ env.GENDER == "Male" }}
+        if: ${{ env.GENDER == 'Male' }}
         run: |
           echo "Hey there, $NAME ! Welcome aboard. Your presence adds a touch of strength and character to our space. Let's conquer this journey together!"
 
       - name: The ladies Greeting
-        if: ${{ env.GENDER == "Female"  }}
+        if: ${{ env.GENDER == 'Female'  }}
         run: |
           echo "Hello $NAME ! 🌸 Sending you warm and graceful vibes on this beautiful day. Wishing you joy, laughter, and all the wonderful moments that make you shine. You're truly special, and your presence brightens the world. Embrace the beauty of today! 💖✨"
