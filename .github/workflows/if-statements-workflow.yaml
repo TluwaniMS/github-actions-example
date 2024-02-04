@@ -7,7 +7,7 @@ jobs:
     env:
       NAME: 'Rofhiwa'
       AGE: 28
-      GENDER: 'Male'
+      GENDER: 'Female'
       QUALIFIES: true
     steps:
       - name: Greet the guest.
