@@ -5,9 +5,9 @@ jobs:
   user-information-communicator:
     runs-on: ubuntu-latest
     env:
-      Name: Rofhiwa
+      Name: "Rofhiwa"
       Age: 28
-      Gender: Male
+      Gender: "Male"
       Qualifies: true
     steps:
       - name: Greet the guest.
