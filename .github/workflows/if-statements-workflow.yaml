@@ -1,14 +1,15 @@
 name: If Statements Workflow Example
 on: push
 
+env:
+  NAME: "Rofhiwa"
+  AGE: 28
+  GENDER: "Male"
+  QUALIFIES: true
+
 jobs:
   user-information-communicator:
     runs-on: ubuntu-latest
-    env:
-      NAME: "Rofhiwa"
-      AGE: 28
-      GENDER: "Male"
-      QUALIFIES: true
     steps:
       - name: Greet the guest.
         run: echo "Greetings $NAME, and welcome to GitHub Actions workflow info emitter."
